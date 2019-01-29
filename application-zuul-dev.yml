@@ -1,0 +1,11 @@
+server:
+  port: 9666
+spring:
+  application:
+    name: zuul
+zuul:
+  ignored-services: "*"
+  prefix: "/services"
+  routes: #路由的配置
+    user.serviceId: buythis-plat
+    user.path: /user/**
